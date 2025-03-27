@@ -41,8 +41,8 @@ pipeline {
         stage('Docker') {
             steps {
                 script {
-                    def imagen = 'desafio_jenkins:latest'
-                    bat "docker build -t ${imagen} ."
+                    bat "docker build -t desafio_jenkins ."
+                    bat "docker run -p 3000:3000 desafio_jenkins"
                 }
             }
         } 
