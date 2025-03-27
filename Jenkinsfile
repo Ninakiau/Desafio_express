@@ -7,7 +7,9 @@ pipeline {
     stages { 
         stage('Clonar Repositorio') {
             steps {
+                echo "*" "Clonando el repositorio..."
                 git 'https://github.com/Ninakiau/Desafio_express.git'
+                checkout scm
             }
 
         }
